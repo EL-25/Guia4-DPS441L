@@ -54,6 +54,14 @@ export const Header = ({
               <div className={cartStyles.itemsList}>
                 {allProducts.map((product) => (
                   <div className={cartStyles.itemRow} key={product.id}>
+                    
+                    {/* ---MEJORA: Agregamos la imagen en el carrito --- */}
+                    <img 
+                      src={product.urlImage} 
+                      alt={product.title} 
+                      style={{ width: '40px', height: '60px', objectFit: 'cover', borderRadius: '4px', marginRight: '10px' }} 
+                    />
+                    
                     <div className="flex-1">
                       <div className={cartStyles.itemContainer}>
                         <span className={cartStyles.itemTitle}>
